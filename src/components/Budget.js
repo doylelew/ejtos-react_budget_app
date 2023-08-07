@@ -2,10 +2,21 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Budget = () => {
-    const { budget } = useContext(AppContext);
+    const { dispatch, budget } = useContext(AppContext);
+
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: £{budget}</span>
+            <span>Budget: £ 
+                <input
+                    required='required'
+                    type='number'
+                    id='cost'
+                    value={budget}
+                    onChange={(event) => dispatch({type:'SET_BUDGET', payload: event.target.value})}
+                    onBlur= {(event) => dispatch({type:'VALIDATE_BUDGET'})}
+                    >
+                </input>
+            </span>
         </div>
     );
 };
