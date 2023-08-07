@@ -13,7 +13,7 @@ const Budget = () => {
                     id='cost'
                     value={budget}
                     onChange={(event) => dispatch({type:'SET_BUDGET', payload: event.target.value})}
-                    onBlur= {(event) => dispatch({type:'VALIDATE_BUDGET'})}
+                    onBlur= {() => dispatch({type:'VALIDATE_BUDGET'})}
                     >
                 </input>
             </span>
