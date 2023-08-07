@@ -1,12 +1,8 @@
-.dropdown-button {
-    color: white;
+.select-box {
     background-color: rgb(145, 233, 145);  
-}
+    width:200px;
+    height:50px;
+    border-radius: 5px;
+    border-color: rgb(145, 233, 145);
 
-.dropdown-button:checked { background-color: rgb(145, 233, 145); }
-.dropdown-button:hover { background-color: rgb(145, 233, 145); }
-
-
-.dropdown-options {
-    background-color: rgb(145, 233, 145);
 }
